@@ -16,4 +16,10 @@ function updateHeroH1(nthDay) {
   heroH1.innerHTML = "DAY " + nthDay;
 }
 
-updateHeroH1(getNthDay(TODAY));
+
+function addDaysToDate(date, days) {
+  var result = new Date(date);
+  result.setDate(date.getDate() + days);
+  return result;
+}
+
