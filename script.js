@@ -16,6 +16,12 @@ function updateHeroH1(nthDay) {
   heroH1.innerHTML = "DAY " + nthDay;
 }
 
+function populateHistory(nthDay) {
+  for (var i = nthDay - 1; i > 0; i--) {
+    console.log(buildHistoryString(i));
+  }
+}
+
 function buildHistoryString(daysElapsed) {
   var historyDate = addDaysToDate(START, daysElapsed - 1);
   return historyDate + " day " + daysElapsed;
@@ -27,3 +33,8 @@ function addDaysToDate(date, days) {
   return result;
 }
 
+
+var nthDay = getNthDay(TODAY);
+
+updateHeroH1(nthDay);
+populateHistory(nthDay);
