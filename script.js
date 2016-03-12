@@ -33,7 +33,6 @@ function updateHeroH1(nthDay) {
 function populateHistory(nthDay) {
   var historyDiv = document.querySelector(".history");
   for (var i = nthDay - 1; i > 0; i--) {
-    console.log(buildHistoryString(i));
     createHistoryElement(historyDiv, i);
   }
 }
