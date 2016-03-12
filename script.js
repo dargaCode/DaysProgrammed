@@ -13,7 +13,7 @@ function getNthDay(endDate) {
 
 function updateHeroH1(nthDay) {
   var heroH1 = document.querySelector(".hero h1");
-  heroH1.innerText = "DAY " + nthDay;
+  heroH1.innerHTML = "DAY " + nthDay;
 }
 
 updateHeroH1(getNthDay(TODAY));
