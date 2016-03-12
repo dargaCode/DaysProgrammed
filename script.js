@@ -1,6 +1,20 @@
 var START = new Date("May 10 2015");
 var TODAY = new Date();
 var MS_PER_DAY = 1000 * 60 * 60 * 24;
+var MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
+];
 
 function getNthDay(endDate) {
   var msElapsed = endDate - START;
@@ -24,7 +38,12 @@ function populateHistory(nthDay) {
 
 function buildHistoryString(daysElapsed) {
   var historyDate = addDaysToDate(START, daysElapsed - 1);
-  return historyDate + " day " + daysElapsed;
+  var monthNum = historyDate.getMonth();
+  var month = MONTHS[monthNum];
+  var day = historyDate.getDate();
+  var year = historyDate.getFullYear();
+  var dateString = month + " " + day + " " + year;
+  return dateString + " - day " + daysElapsed;
 }
 
 function addDaysToDate(date, days) {
