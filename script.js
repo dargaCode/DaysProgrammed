@@ -36,6 +36,12 @@ function populateHistory(nthDay) {
   }
 }
 
+function createHistoryElement(parent, historyDay) {
+  var historyElement = document.createElement("p");
+  historyElement.innerHTML = buildHistoryString(historyDay);
+  parent.appendChild(historyElement);
+}
+
 function buildHistoryString(daysElapsed) {
   var historyDate = addDaysToDate(START, daysElapsed - 1);
   var monthNum = historyDate.getMonth();
