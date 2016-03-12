@@ -43,7 +43,7 @@ function buildHistoryString(daysElapsed) {
   var day = historyDate.getDate();
   var year = historyDate.getFullYear();
   var dateString = month + " " + day + " " + year;
-  return dateString + " - day " + daysElapsed;
+  return dateString + " - Day " + daysElapsed;
 }
 
 function addDaysToDate(date, days) {
