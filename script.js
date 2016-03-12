@@ -52,7 +52,6 @@ function addDaysToDate(date, days) {
   return result;
 }
 
-
 var nthDay = getNthDay(TODAY);
 
 updateHeroH1(nthDay);
